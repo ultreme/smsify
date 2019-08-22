@@ -15,10 +15,10 @@ executors:
 
 orbs:
   codecov: codecov/codecov@1.0.5
-  ultreme: ultreme/build@1.5.0
-  retry: ultreme/retry@0.6.0
+  moul: moul/build@1.5.0
+  retry: moul/retry@0.6.0
   docker: circleci/docker@0.5.13
-  #dl: ultreme/dl@1.7.0
+  #dl: moul/dl@1.7.0
   tools: gotest/tools@0.0.10
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
       - tools/mod-tidy-check
       - run: retry -m 3 make install
       - run: retry -m 3 make test
-      - ultreme/install_golangci-lint
+      - moul/install_golangci-lint
       - run: PATH=$PATH:$(pwd)/bin retry -m 3 make lint
       - codecov/upload:
           file: coverage.txt
