@@ -17,8 +17,8 @@
 ## Usage
 
 ```console
-$ smsify -h
-...
+$ echo "Salut ça va ?" | smsify
+slt sa va?
 ```
 
 ## Install
