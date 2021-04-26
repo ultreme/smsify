@@ -4,7 +4,7 @@ executors:
   golang:
     working_directory: /go/src/ultre.me/smsify
     docker:
-      - image: circleci/golang:1.15
+      - image: circleci/golang:1.16
     environment:
       GO111MODULE: "on"
       DOCKER_IMAGE: ultreme/smsify
